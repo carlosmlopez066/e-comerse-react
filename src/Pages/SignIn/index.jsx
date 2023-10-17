@@ -1,13 +1,9 @@
-function SignIn
-  () {
-
+import Layout from "../../Components/Layout"
+function SignIn() {
   return (
-    <>
-      <div className='bg-red-600'>
-        SignIn
-
-      </div>
-    </>
+    <Layout className='bg-red-600'>
+      SignIn
+    </Layout>
   )
 }
 
