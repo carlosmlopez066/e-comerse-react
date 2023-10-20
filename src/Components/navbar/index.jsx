@@ -1,3 +1,4 @@
+import { ShoppingCartIcon } from '@heroicons/react/24/outline'
 import { useContext } from "react"
 import { ShoppingCartContext } from "../../Context"
 import { NavLink } from "react-router-dom"
@@ -89,8 +90,8 @@ const Navbar = () => {
             My Account
           </NavLink>
         </li>
-        <li>
-          🛒{context.count}
+        <li className='flex'>
+          <ShoppingCartIcon className="h-6 w-6 text-black" /> {context.count}
         </li>
       </ul>
     </nav>
