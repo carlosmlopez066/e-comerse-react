@@ -18,17 +18,19 @@ const CheckoutSideMenu = () => {
           <XMarkIcon onClick={() => context.closecheckoutSideMenu()} className="h-6 w-6 text-black cursor-pointer" />
         </div>
       </div>
-      {
-        context.cartProducts.map(product => (
-          <OrderCard
-            key={product.id}
-            image={product.image}
-            title={product.title}
-            price={product.price}
-          />
+      <div className=" w-full p-6 overflow-y-scroll">
+        {
+          context.cartProducts.map(product => (
+            <OrderCard
+              key={product.id}
+              image={product.image}
+              title={product.title}
+              price={product.price}
+            />
 
-        ))
-      }
+          ))
+        }
+      </div>
     </aside>
   )
 }
