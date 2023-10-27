@@ -2,12 +2,14 @@ import { useContext } from "react"
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import { ShoppingCartContext } from "../../Context"
 import OrderCard from "../../Components/OrderCard"
+import { totalPrice } from "../../utils"
 import "./styles.css"
 
 
 const CheckoutSideMenu = () => {
+
   const context = useContext(ShoppingCartContext)
-  console.log('cart', context.cartProducts)
+  //console.log('cart', context.cartProducts.map(priceProduct => priceProduct.price))
 
   const handleDelete = (id) => {
     const filteredProducts = context.cartProducts.filter(product => product.id != id)
@@ -38,6 +40,12 @@ const CheckoutSideMenu = () => {
 
           ))
         }
+      </div>
+      <div className=" w-full p-6">
+        <p className="flex items-center justify-between  text-lg font-sm  ">
+          <span >Total price</span>
+          <span className="text-lg font-medium ">${totalPrice(context.cartProducts)}</span>
+        </p>
       </div>
     </aside>
   )
