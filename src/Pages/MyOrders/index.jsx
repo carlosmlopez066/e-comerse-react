@@ -5,7 +5,6 @@ import Layout from "../../Components/Layout"
 import OrdersCard from "../../Components/OrdersCard"
 function MyOrders() {
   const context = useContext(ShoppingCartContext)
-  console.log('my orderr', context.order)
   return (
     <Layout>
       <div>
