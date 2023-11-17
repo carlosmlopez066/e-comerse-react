@@ -13,6 +13,8 @@ const Navbar = () => {
         <li className="font-semibold text-lg">
           <NavLink
             to="/"
+            onClick={() => context.setSearchByCategory()}
+
           >
             Shopi
           </NavLink>

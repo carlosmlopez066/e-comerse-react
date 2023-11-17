@@ -10,7 +10,7 @@ function Home() {
   const renderView = () => {
     if (context.filteredItems?.length > 0) {
       return (
-        context.filteredItems?.map((item) => (
+        context.filteredItems?.map(item => (
           <Card key={item.id} data={item} />
         ))
       )

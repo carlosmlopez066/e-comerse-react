@@ -52,7 +52,7 @@ export const ShoppingCartProvider = ({ children }) => {
   }
 
   const filterBy = (searchType, items, searchByTitle, searchByCategory) => {
-    if (searchType === "BY_TITTLE") {
+    if (searchType === "BY_TITLE") {
       return filteredItemsByTitle(items, searchByTitle)
     }
     if (searchType === "BY_CATEGORY") {
